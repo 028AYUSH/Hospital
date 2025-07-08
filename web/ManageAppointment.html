@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Appointment</title>
+</head>
+<body>
+
+    <h2>Manage Appointment</h2>
+
+    <form action="ManageAppointmentServlet" method="post">
+        <label for="appointmentId">Appointment ID:</label>
+        <input type="text" id="appointmentId" name="appointmentId" required><br><br>
+
+        <label for="action">Action:</label>
+        <select id="action" name="action">
+            <option value="cancel">Cancel Appointment</option>
+            <option value="reschedule">Reschedule Appointment</option>
+        </select><br><br>
+
+        <div id="rescheduleFields" style="display:none;">
+            <label for="newDate">New Appointment Date:</label>
+            <input type="date" id="newDate" name="newDate"><br><br>
+
+            <label for="newDoctorId">New Doctor ID:</label>
+            <input type="text" id="newDoctorId" name="newDoctorId"><br><br>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // Show the additional fields for rescheduling only
+        document.getElementById('action').addEventListener('change', function () {
+            if (this.value === 'reschedule') {
+                document.getElementById('rescheduleFields').style.display = 'block';
+            } else {
+                document.getElementById('rescheduleFields').style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>

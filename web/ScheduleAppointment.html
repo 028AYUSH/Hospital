@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Appointment</title>
+</head>
+<body>
+
+    <h2>Schedule a New Appointment</h2>
+
+    <form action="ScheduleAppointment" method="post">
+        <label for="patientId">Patient ID:</label>
+        <input type="text" id="patientId" name="patientId" required><br><br>
+
+        <label for="doctorId">Doctor ID:</label>
+        <input type="text" id="doctorId" name="doctorId" required><br><br>
+
+        <label for="appointmentDate">Appointment Date:</label>
+        <input type="date" id="appointmentDate" name="appointmentDate" required><br><br>
+
+        <input type="submit" value="Schedule Appointment">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Availability</title>
+</head>
+<body>
+    <h1>Update Availability</h1>
+    <form action="UpdateAvailabilityServlet" method="post">
+        <div> Doc Id:<input type="text" name="doctorId">
+            </div>
+        <label for="availableDate">Available Date (YYYY-MM-DD):</label>
+        <input type="date" id="availableDate" name="availableDate" required><br>
+        <label for="availabilityStatus">Availability Status:</label>
+        <select id="availabilityStatus" name="availabilityStatus" required>
+            <option value="Yes">Available</option>
+            <option value="No">Unavail</option>
+        </select><br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Background and overall styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #7bdfeb, #3aaf85); /* Medical color gradient */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Form container */
+        div {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #3aaf85;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        input[type="text"], input[type="password"], input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus {
+            border-color: #3aaf85;
+            box-shadow: 0 0 8px rgba(58, 175, 133, 0.3);
+            outline: none;
+        }
+
+        /* Professional button colors */
+        input[type="submit"], input[type="reset"] {
+            width: 48%;
+            padding: 15px;
+            background-color: #4a90e2; /* Professional Blue */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="reset"] {
+            background-color: #e0e0e0; /* Neutral Gray for reset */
+            color:#4a90e2;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #357ABD; /* Darker Blue */
+        }
+
+        input[type="reset"]:hover {
+            background-color: #bdbdbd; /* Darker Gray for reset */
+        }
+
+        /* Animation for form appearance */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer section with small text */
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-footer a {
+            text-decoration: none;
+            color: #3aaf85;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .form-footer a:hover {
+            color: #1f7e4d;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Sign Up</h1>
+        <form method="post" action="SignUp">
+            <label for="email">Email Id:</label>
+            <input type="text" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" required>
+            
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+            
+            <label for="dob">DOB:</label>
+            <input type="date" name="dob" required>
+            
+            <div>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+        <div class="form-footer">
+            <p>Already have an account? <a href="#">Log in here</a></p>
+        </div>
+    </div>
+</body>
+</html>
